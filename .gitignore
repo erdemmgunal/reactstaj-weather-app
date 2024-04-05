@@ -10,3 +10,7 @@ jspm_packages/
 
 # next.js build output
 .next
+
+# ignore test files
+*test*
+*test*.js
