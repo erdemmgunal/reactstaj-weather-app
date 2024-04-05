@@ -13,14 +13,18 @@ export default function WeatherPage({ params }) {
 
   const { lat, lon } = params;
 
+  const [cachedData, setCachedData] = useState(null);
+
   const fetchWeatherData = async (latitude, longitude) => {
     try {
-      const response = await fetch(
-        `/api/getWeather?lat=${latitude}&lon=${longitude}`
-      );
+      const response = await fetch(`/api/getWeather?lat=${latitude}&lon=${longitude}`, {next : {revalidate: 5}});
       const data = await response.json();
       if (data.status === 200) {
         setWeatherData(data.results);
+        setCachedData(data.results);
+        setTimeout(() => {
+          setCachedData(null);
+        }, 10000); // 10 seconds
       } else {
         setWeatherData(null);
       }
@@ -30,8 +34,12 @@ export default function WeatherPage({ params }) {
   };
 
   useEffect(() => {
-    fetchWeatherData(lat, lon);
-  }, []);
+    if (cachedData) {
+      setWeatherData(cachedData);
+    } else {
+      fetchWeatherData(lat, lon);
+    }
+  }, [lat, lon, cachedData]);
   
   return (
     <>

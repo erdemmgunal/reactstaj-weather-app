@@ -1,6 +1,5 @@
 import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
-import Details from "./components/ChartDetails";
 
 export default function Home() {
   return (
