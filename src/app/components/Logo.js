@@ -1,6 +1,8 @@
-import React from 'react';
-
 export default function Logo() {
+    const redirectToHomePage = () => {
+        window.location.href = "/";
+    };
+
     return (
         <div className='p-20 flex justify-center items-center'>
             <svg width="36" height="24" viewBox="0 0 37 24" xmlns="http://www.w3.org/2000/svg" className="mr-2">

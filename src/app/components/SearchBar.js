@@ -49,12 +49,11 @@ export default function SearchBar() {
         const latitude = position.coords.latitude.toFixed(5);
         const longitude = position.coords.longitude.toFixed(5);
         redirectUser(latitude, longitude)
-        // console.log(latitude, longitude);
       }, (error) => {
         console.error(error);
       });
     } else {
-      console.error("Geolocation is not supported by this browser.");
+      alert("Geolocation is not supported by this browser.");
     }
   }
 

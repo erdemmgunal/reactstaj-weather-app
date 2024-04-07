@@ -53,44 +53,35 @@ export default function WeatherPage({ params }) {
                   </div>
                 </div>
               </div>
-              <div className="w-[359px] h-[328px] bg-gray-800 p-3 rounded-xl flex justify-start items-center">
-                <div className="w-full h-full rounded-lg bg-cover flex flex-col">
-                  <div className="mx-5 mt-5 text-gray-100 flex flex-col gap-2 flex-grow">
-                    <div className="flex items-center mb-2">
-                      <div className="flex items-center">
-                        <FaTemperatureFull className="text-4xl mr-2" />
-                        <p className="font-bold">Feels Like:</p>
-                      </div>
+              <div className="w-[359px] h-[328px] bg-gray-800 p-3 rounded-xl flex justify-start items-center overflow-hidden">
+                <div className="w-full h-full rounded-lg bg-cover flex flex-col justify-center">
+                  <div className="mx-5 text-gray-100 flex flex-col gap-2">
+                    <div className="flex items-center">
+                      <FaTemperatureFull className="text-4xl mr-2" />
+                      <p className="font-bold">Feels Like:</p>
                       <p className="font-bold ml-auto">{weatherData.feels_like}℃</p>
                     </div>
                     <hr className="border-gray-600 my-2" />
-                    <div className="flex items-center mb-2">
-                      <div className="flex items-center">
-                        <FaDroplet className="text-4xl mr-2" />
-                        <p className="font-bold">Humidity:</p>
-                      </div>
+                    <div className="flex items-center">
+                      <FaDroplet className="text-4xl mr-2" />
+                      <p className="font-bold">Humidity:</p>
                       <p className="font-bold ml-auto">{weatherData.humidity}%</p>
                     </div>
                     <hr className="border-gray-600 my-2" />
-                    <div className="flex items-center mb-2">
-                      <div className="flex items-center">
-                        <FaWind className="text-4xl mr-2" />
-                        <p className="font-bold">Wind Speed:</p>
-                      </div>
+                    <div className="flex items-center">
+                      <FaWind className="text-4xl mr-2" />
+                      <p className="font-bold">Wind Speed:</p>
                       <p className="font-bold ml-auto">{weatherData.wind_speed}m/s</p>
                     </div>
                     <hr className="border-gray-600 my-2" />
-                    <div className="flex items-center mb-2">
-                      <div className="flex items-center">
-                        <MdOutlineVisibility className="text-4xl mr-2" />
-                        <p className="font-bold">Visibility:</p>
-                      </div>
+                    <div className="flex items-center">
+                      <MdOutlineVisibility className="text-4xl mr-2" />
+                      <p className="font-bold">Visibility:</p>
                       <p className="font-bold ml-auto">{weatherData.visibility}km</p>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
 

@@ -2,8 +2,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+:root {
+    --background-dark: url("images/background-dark.png");
+    --background-light: url("images/background-light.png");
+}
+
 html {
-    background-image: url("images/background.png");
+    background-image: var(--background-dark);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

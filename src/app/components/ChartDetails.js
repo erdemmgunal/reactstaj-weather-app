@@ -27,7 +27,7 @@ export default function Details({ results }) {
           minValue={0}
           showAnimation={true}
           valueFormatter={dataFormatter}
-          yAxisWidth={40}
+          yAxisWidth={60}
         />
       </Card  >
     </>
