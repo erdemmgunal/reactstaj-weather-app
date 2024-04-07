@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="theme-color" content="#13131A" />
       </head>
-      <html lang="en" suppressContentEditableWarning>
+      <html lang="en">
         <body className={inter.className}>
           {children}
           <Footer />
