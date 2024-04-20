@@ -26,9 +26,9 @@ export async function GET(request) {
     }
 
     try {
-        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}1&lon=${lon}&appid=${OPEN_WEATHER_APP_ID}`);
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}1&lon=${lon}&appid=${OPEN_WEATHER_APP_ID}`, { next : { revalidate : 900 }});
 
-        const forecastResponse = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${OPEN_WEATHER_APP_ID}`);
+        const forecastResponse = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${OPEN_WEATHER_APP_ID}`, { next : { revalidate : 900 }});
 
         const forecastResults = forecastResponse.data.list.map((item) => {
             return {
