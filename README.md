@@ -17,15 +17,13 @@ Install iWeather-App with npm
   cd reactstaj-weather-app
 ```
     
-## Features
+## Key Features
 
 
-- Check local weather data with geographical location toggle
-- Live previews
-- Fullscreen mode
-- Responsive Design
-- Graphic chart to view min/max weather forecasts 
-- Cross platform
+- Geographical Toggle Button: Easily switch between viewing the local weather and exploring weather data for other locations by toggling the geographical feature.
+- Search Functionality: Seamlessly search for weather information in specific cities or regions using the search button. Enter the desired location, and WeatherApp will retrieve the relevant weather data for you.
+- Detailed Weather Information: Gain insights into various weather parameters including temperature, feels like temperature, humidity, wind speed, and visibility. WeatherApp provides comprehensive data to help you plan your day accordingly.
+- Graphical Forecast Chart: Visualize the weather forecast with a graphical chart displaying minimum and maximum temperatures over a specified period. This feature allows users to quickly grasp the temperature trends and plan their activities accordingly.
 
 ## Environment Variables
 
