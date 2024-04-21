@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Demo
+[https://reactstaj-iweather.vercel.app](https://reactstaj-iweather.vercel.app)
 
-First, run the development server:
+# Project Description
+
+
+WeatherApp is a user-friendly weather application that provides users with accurate and up-to-date weather information. Whether you want to check the local weather or explore weather forecasts for different locations, WeatherApp has you covered. With its intuitive interface and convenient features, staying informed about the weather has never been easier.
+
+## Installation
+
+
+Install iWeather-App with npm
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/erdemmgunal/reactstaj-weather-app.git
+  cd reactstaj-weather-app
+```
+    
+## Key Features
+
+
+- Geographical Toggle Button: Easily switch between viewing the local weather and exploring weather data for other locations by toggling the geographical feature.
+- Search Functionality: Seamlessly search for weather information in specific cities or regions using the search button. Enter the desired location, and WeatherApp will retrieve the relevant weather data for you.
+- Detailed Weather Information: Gain insights into various weather parameters including temperature, feels like temperature, humidity, wind speed, and visibility. WeatherApp provides comprehensive data to help you plan your day accordingly.
+- Graphical Forecast Chart: Visualize the weather forecast with a graphical chart displaying minimum and maximum temperatures over a specified period. This feature allows users to quickly grasp the temperature trends and plan their activities accordingly.
+
+## Environment Variables
+
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`OPEN_WEATHER_APP_ID`
+
+## API Reference
+
+#### Autocomplete Search
+
+
+```http
+  GET /api/autocomplete/?query=<city>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+|  `query`  | `string` | **Required**.  City to go  |
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+#### Get Weather Data
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+```http
+  GET /api/getWeather/?lat=<latitude>&lon=<longitude>
+```
 
-To learn more about Next.js, take a look at the following resources:
+|  Parameter  | Type     | Description                       |
+|  :--------  | :------- | :-------------------------------- |
+|    `lat`    | `string` | **Required**.  latitude for city  |
+|    `lon`    | `string` | **Required**. longitude for city  |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- React.js
+- Tailwind CSS
+- Axios
+- OpenWeather API
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Future Enhancements
+
+WeatherApp is continuously evolving to meet the needs of its users. Future enhancements may include: (yapmicam buyuk bir ihtimalle readme guzel gozuksun diye)
+-User Preferences: Allow users to customize their weather preferences and save favorite locations for quick access.
+-Weather Alerts: Implement real-time weather alerts and notifications to keep users informed about severe weather conditions in their area.
+-Internationalization: Support multiple languages to cater to users from diverse linguistic backgrounds.
+-Theme Toggle: Introduce a theme toggle feature that enables users to switch between dark and light themes based on their preferences. This feature enhances the user experience by providing flexibility and personalization options.
+-Search Functionality: Add a search functionality that allows users to search for weather forecasts of specific locations. Users can enter the name of the city or town they want to check the weather for, providing them with more control and convenience.
+
+
+## Feedback
+
+We value your feedback! If you encounter any issues or have suggestions for improvement, please let us know. You can reach out to us at [erdemmgunal@gmail.com](mailto:erdemmgunal@gmail.com) or create a pull request directly on GitHub. Your contributions help us make iWeather-App even better for everyone!
+
