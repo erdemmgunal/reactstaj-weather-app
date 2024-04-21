@@ -2,12 +2,13 @@
 ## Demo
 [https://reactstaj-iweather.vercel.app](https://reactstaj-iweather.vercel.app)
 
-# Project Title
+# Project Description
 
-A brief description of what this project does and who it's for
 
+WeatherApp is a user-friendly weather application that provides users with accurate and up-to-date weather information. Whether you want to check the local weather or explore weather forecasts for different locations, WeatherApp has you covered. With its intuitive interface and convenient features, staying informed about the weather has never been easier.
 
 ## Installation
+
 
 Install iWeather-App with npm
 
@@ -18,6 +19,7 @@ Install iWeather-App with npm
     
 ## Features
 
+
 - Check local weather data with geographical location toggle
 - Live previews
 - Fullscreen mode
@@ -25,17 +27,17 @@ Install iWeather-App with npm
 - Graphic chart to view min/max weather forecasts 
 - Cross platform
 
-
 ## Environment Variables
+
 
 To run this project, you will need to add the following environment variables to your .env file
 
 `OPEN_WEATHER_APP_ID`
 
-
 ## API Reference
 
 #### Autocomplete Search
+
 
 ```http
   GET /api/autocomplete/?query=<city>
@@ -46,6 +48,7 @@ To run this project, you will need to add the following environment variables to
 |  `query`  | `string` | **Required**.  City to go  |
 
 #### Get Weather Data
+
 
 ```http
   GET /api/getWeather/?lat=<latitude>&lon=<longitude>
@@ -59,12 +62,12 @@ To run this project, you will need to add the following environment variables to
 
 ## Technologies Used
 
+
 - React.js
 - Tailwind CSS
 - Axios
 - OpenWeather API
 
-## Feedback
 
 ## Feedback
 
