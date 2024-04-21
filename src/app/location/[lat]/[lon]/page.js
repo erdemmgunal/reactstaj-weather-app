@@ -6,7 +6,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 import Card from "@/app/components/Card";
 import { useEffect, useState } from "react";
 import Logo from "@/app/components/Logo";
-import Head from "next/head";
 
 export default function WeatherPage({ params }) {
   const [weatherData, setWeatherData] = useState(null);
@@ -53,7 +52,7 @@ export default function WeatherPage({ params }) {
       )}
       {weatherData && (
         <div className="flex items-center justify-center mb-4">
-          <div className="w-[359px] md:w-[734px] bg-gray-800">
+          <div className="w-[359px] md:w-[734px]">
             <ChartDetails results={weatherData} />
           </div>
         </div>
