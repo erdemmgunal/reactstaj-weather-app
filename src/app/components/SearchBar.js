@@ -58,13 +58,13 @@ export default function SearchBar() {
 
   return (
     <div className='flex justify-center text-center'>
-        <div className='flex flex-col gap-1 mb-4'>
-            <p className='text-4xl font-bold text-white'>Welcome to <span className='text-[#8FB2F5]'>iWeather</span></p>
+        <div className='flex flex-col gap-1'>
+            <p className='text-3xl font-bold text-white'>Welcome to <span className='text-[#8FB2F5]'>iWeather</span></p>
             <p className='text-slate-500'>Choose a location to see the weather forecast</p>
             <div className='flex items-center'>
               <input
                 type='text'
-                className='bg-[#1E1E29] p-4 rounded-lg mt-5 mb-5 w-96 text-white h-10'
+                className='bg-[#1E1E29] p-4 rounded-lg mt-5 mb-5 w-full sm:w-96 text-white h-10'
                 value={search}
                 onChange={handleChange}
                 placeholder='Enter a city'
