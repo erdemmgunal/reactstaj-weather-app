@@ -66,4 +66,7 @@ To run this project, you will need to add the following environment variables to
 
 ## Feedback
 
-If you have any feedback, please reach out to us at [email](erdemmgunal@gmail.com)
+## Feedback
+
+We value your feedback! If you encounter any issues or have suggestions for improvement, please let us know. You can reach out to us at [erdemmgunal@gmail.com](mailto:erdemmgunal@gmail.com) or create a pull request directly on GitHub. Your contributions help us make iWeather-App even better for everyone!
+
