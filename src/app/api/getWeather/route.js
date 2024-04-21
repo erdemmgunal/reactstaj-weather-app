@@ -43,6 +43,7 @@ export async function GET(request) {
         const data = response.data;
         const results = {
             weather: data.weather[0].description,
+            weatherMain: data.weather[0].main,
             name:`${data.name}, ${data.sys.country}`,
             temp: Math.floor(kelvinToCelsius(data.main.temp)),
             feels_like: Math.floor(kelvinToCelsius(data.main.feels_like)),
@@ -50,8 +51,11 @@ export async function GET(request) {
             temp_max: Math.floor(kelvinToCelsius(data.main.temp_max)),
             visibility: data.visibility / 1000,
             date: formatDate(Date.now()),
-            sunrise: new Date(data.sys.sunrise * 1000).toLocaleTimeString(),
+            sunrise: data.sys.sunrise,
+            sunset: data.sys.sunset,
             humidity: data.main.humidity,
+            timezone: data.timezone,
+            dt: data.dt,
             wind_speed: data.wind.speed,
             forecasts: forecastResults
         };

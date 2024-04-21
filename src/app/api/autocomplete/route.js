@@ -16,6 +16,7 @@ export async function GET(request) {
                 country: item.country_code,
             }
         });
+        console.log(data);
         return NextResponse.json({ status: 200, results:results});
     } catch (error) {
         return NextResponse.json({ status: 500, message: 'Internal Server Error' });

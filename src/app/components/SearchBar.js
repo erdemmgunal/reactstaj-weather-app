@@ -36,7 +36,6 @@ export default function SearchBar() {
         setResults([])
       }}
     )
-
   }
 
   const redirectUser = (latitude, longitude) => {
@@ -79,7 +78,7 @@ export default function SearchBar() {
             </div >
             {results && results.length > 0 && results.map((item,index) => (
               <div key={index} className='bg-[#3b3b56] p-2 rounded-lg hover:bg-gray-800'>
-                <p className='text-[#FAFAFA] cursor-pointer ' onClick={() => redirectUser(item.lat, item.lon)}>{item.name}</p>
+                <p className='text-[#FAFAFA] cursor-pointer ' onClick={() => redirectUser(item.lat, item.lon)}>{item.name}, {item.country}</p>
               </div>
             ))}
         </div>

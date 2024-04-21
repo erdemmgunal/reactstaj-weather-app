@@ -1,17 +1,19 @@
 "use client";
-import { useEffect, useState } from "react";
-import Logo from "@/app/components/Logo";
+import WeatherData from "@/app/components/WeatherData";
 import ChartDetails from "@/app/components/ChartDetails";
 import SearchBar from "@/app/components/SearchBar";
-import { FaWind } from "react-icons/fa";
-import { MdOutlineVisibility } from "react-icons/md";
-import { FaTemperatureFull, FaDroplet } from "react-icons/fa6";
 import ClipLoader from "react-spinners/ClipLoader";
+import Card from "@/app/components/Card";
+import { useEffect, useState } from "react";
+import Logo from "@/app/components/Logo";
+import Head from "next/head";
 
 export default function WeatherPage({ params }) {
   const [weatherData, setWeatherData] = useState(null);
 
   const { lat, lon } = params;
+  
+  const initial = new Date()
 
   const fetchWeatherData = async (latitude, longitude) => {
     try {
@@ -40,48 +42,8 @@ export default function WeatherPage({ params }) {
       {weatherData ? (
         <div className="flex items-center justify-center mb-4">
           <div className="flex flex-col md:flex-row gap-4">
-            <div className="w-[359px] h-[328px] bg-gray-800 p-3 rounded-xl">
-              <div className="w-full h-full rounded-lg bg-cover flex flex-col justify-between">
-                <div className="mt-5 ml-5 text-gray-100">
-                  <h3 className="text-3xl font-bold">{weatherData.name}</h3>
-                  <p className="text-s">{weatherData.date}</p>
-                </div>
-                <div className="ml-5 mt-5 text-gray-100">
-                  <p className="text-5xl font-bold mb-2">{weatherData.temp}°c</p>
-                  <p className="text-l font-bold">{weatherData.temp_min}°c / {weatherData.temp_max}°c</p>
-                  <p className="text-l font-bold">{weatherData.weather}</p>
-                </div>
-              </div>
-            </div>
-            <div className="w-[359px] h-[328px] bg-gray-800 p-3 rounded-xl flex justify-start items-center overflow-hidden">
-              <div className="w-full h-full rounded-lg bg-cover flex flex-col justify-center">
-                <div className="mx-5 text-gray-100 flex flex-col gap-3">
-                  <div className="flex items-center">
-                    <FaTemperatureFull className="text-3xl mr-2" />
-                    <p className="font-bold">Feels Like:</p>
-                    <p className="font-bold ml-auto">{weatherData.feels_like}℃</p>
-                  </div>
-                  <hr className="border-gray-600 my-2" />
-                  <div className="flex items-center">
-                    <FaDroplet className="text-3xl mr-2" />
-                    <p className="font-bold">Humidity:</p>
-                    <p className="font-bold ml-auto">{weatherData.humidity}%</p>
-                  </div>
-                  <hr className="border-gray-600 my-2" />
-                  <div className="flex items-center">
-                    <FaWind className="text-3xl mr-2" />
-                    <p className="font-bold">Wind Speed:</p>
-                    <p className="font-bold ml-auto">{weatherData.wind_speed}m/s</p>
-                  </div>
-                  <hr className="border-gray-600 my-2" />
-                  <div className="flex items-center">
-                    <MdOutlineVisibility className="text-3xl mr-2" />
-                    <p className="font-bold">Visibility:</p>
-                    <p className="font-bold ml-auto">{weatherData.visibility}km</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Card initial={initial} weatherData={weatherData} />
+            <WeatherData weatherData={weatherData}/>
           </div>
         </div>
       ) : (
@@ -91,7 +53,7 @@ export default function WeatherPage({ params }) {
       )}
       {weatherData && (
         <div className="flex items-center justify-center mb-4">
-          <div className="w-[359px] md:w-[734px]">
+          <div className="w-[359px] md:w-[734px] bg-gray-800">
             <ChartDetails results={weatherData} />
           </div>
         </div>
