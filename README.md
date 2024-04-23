@@ -69,11 +69,12 @@ To run this project, you will need to add the following environment variables to
 ## Future Enhancements
 
 WeatherApp is continuously evolving to meet the needs of its users. Future enhancements may include: (yapmicam buyuk bir ihtimalle readme guzel gozuksun diye)
--User Preferences: Allow users to customize their weather preferences and save favorite locations for quick access.
--Weather Alerts: Implement real-time weather alerts and notifications to keep users informed about severe weather conditions in their area.
--Internationalization: Support multiple languages to cater to users from diverse linguistic backgrounds.
--Theme Toggle: Introduce a theme toggle feature that enables users to switch between dark and light themes based on their preferences. This feature enhances the user experience by providing flexibility and personalization options.
--Search Functionality: Add a search functionality that allows users to search for weather forecasts of specific locations. Users can enter the name of the city or town they want to check the weather for, providing them with more control and convenience.
+
+- User Preferences: Allow users to customize their weather preferences and save favorite locations for quick access.
+- Weather Alerts: Implement real-time weather alerts and notifications to keep users informed about severe weather conditions in their area.
+- Internationalization: Support multiple languages to cater to users from diverse linguistic backgrounds.
+- Theme Toggle: Introduce a theme toggle feature that enables users to switch between dark and light themes based on their preferences. This feature enhances the user experience by providing flexibility and personalization options.
+- Search Functionality: Add a search functionality that allows users to search for weather forecasts of specific locations. Users can enter the name of the city or town they want to check the weather for, providing them with more control and convenience.
 
 
 ## Feedback
