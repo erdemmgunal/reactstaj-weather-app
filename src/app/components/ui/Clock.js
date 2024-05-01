@@ -18,7 +18,7 @@ function Clock({ initial, timezone }) {
   }
 
   return (
-    <div className="tabular-nums text-white">
+    <div className="tabular-nums text-[#FAFAFA]">
       {time.toLocaleTimeString("en-US", {
         timeZone: "UTC",
         hour12: true,

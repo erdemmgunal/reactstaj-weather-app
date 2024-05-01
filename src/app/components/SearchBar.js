@@ -58,27 +58,27 @@ export default function SearchBar() {
 
   return (
     <div className='flex justify-center text-center'>
-        <div className='flex flex-col gap-1'>
-            <p className='text-3xl font-bold text-white'>Welcome to <span className='text-[#8FB2F5]'>iWeather</span></p>
+        <div className='flex flex-col gap-1 mb-4'>
+            <p className='text-3xl font-bold text-[#131A2B] dark:text-[#FAFAFA]'>Welcome to <span className='text-[#8FB2F5]'>iWeather</span></p>
             <p className='text-slate-500'>Choose a location to see the weather forecast</p>
             <div className='flex items-center'>
               <input
                 type='text'
-                className='bg-[#1E1E29] p-4 rounded-lg mt-5 mb-5 w-full sm:w-96 text-white h-10'
+                className='bg-[#FAFAFA] dark:bg-[#131A2B] p-4 rounded-lg mt-5 mb-5 w-full sm:w-96 text-[#1E1E29] dark:text-[#FAFAFA] h-10'
                 value={search}
                 onChange={handleChange}
                 placeholder='Enter a city'
               />
               <button
-                className='bg-[#1E1E29] hover:bg-slate-700 p-2 rounded-lg text-[#FAFAFA] ml-2 flex items-center justify-center h-10 w-10'
+                className='bg-[#FAFAFA] text-[#1E1E29] hover:bg-slate-400 dark:bg-[#131A2B] dark:hover:bg-slate-700 p-2 rounded-lg dark:text-[#FAFAFA] ml-2 flex items-center justify-center h-10 w-10'
                 onClick={handleLocationClick}
               >
                 <FaLocationCrosshairs className='h-5 w-5'/>
               </button>
             </div >
             {results && results.length > 0 && results.map((item,index) => (
-              <div key={index} className='bg-[#3b3b56] p-2 rounded-lg hover:bg-gray-800'>
-                <p className='text-[#FAFAFA] cursor-pointer ' onClick={() => redirectUser(item.lat, item.lon)}>{item.name}, {item.country}</p>
+              <div key={index} className='bg-[#FAFAFA] dark:bg-[#1E1E29] p-2 rounded-lg hover:bg-slate-400 dark:hover:bg-slate-700'>
+                <p className='text-[#3b3b56] dark:text-[#FAFAFA] cursor-pointer ' onClick={() => redirectUser(item.lat, item.lon)}>{item.name}, {item.country}</p>
               </div>
             ))}
         </div>

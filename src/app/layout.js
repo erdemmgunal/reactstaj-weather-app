@@ -1,5 +1,6 @@
 import { Nunito } from "next/font/google";
 import Footer from "./components/Footer";
+import Provider from "./utils/themeProvider";
 import "./globals.css";
 
 const inter = Nunito({ subsets: ["latin"] });
@@ -16,9 +17,11 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <html lang="en">
-        <body className={`${inter.className}`}>
-          <main>{children}</main>
-          <Footer />
+        <body className={`${inter.className} h-full bg-cover bg-no-repeat bg-fixed bg-center bg-light-image dark:bg-dark-image`}>
+          <Provider>
+            <main>{children}</main>
+            <Footer />
+          </Provider>
         </body>
       </html>
     </>

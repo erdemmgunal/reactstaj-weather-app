@@ -28,7 +28,6 @@ export default function Details({ results }) {
           showAnimation={true}
           valueFormatter={dataFormatter}
           yAxisWidth={60}
-          theme="dark"
         />
       </Card>
     </>

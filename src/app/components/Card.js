@@ -88,10 +88,10 @@ export default function Card({ weatherData, initial }) {
 
     return (
         <>
-            <div className="w-[359px] h-[328px] bg-gray-800 p-3 rounded-xl">
+            <div className="w-[359px] h-[328px] bg-[#FAFAFA] dark:bg-[#131A2B] p-3 rounded-xl">
                 <div className={`w-full h-full rounded-lg bg-cover flex flex-col justify-between ${backgroundImage}`}>
                     <div className="flex justify-between text-lg font-semibold p-3">
-                        <span className="text-white">{dateConverter(weatherData.timezone, weatherData.dt, "long")}</span>
+                        <span className="text-[#FAFAFA]">{dateConverter(weatherData.timezone, weatherData.dt, "long")}</span>
                         <Clock initial={initial} timezone={weatherData.timezone} />
                     </div>
                     <div className="ml-5 text-gray-100">

@@ -6,7 +6,7 @@
     --background-dark: url("images/background-dark.png");
     --background-light: url("images/background-light.png");
 }
-
+/* 
 html {
     background-image: var(--background-dark);
     background-size: cover;
@@ -14,4 +14,4 @@ html {
     background-attachment: fixed;
     background-position: center;
     height: 100%;
-}
+} */
