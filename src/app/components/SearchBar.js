@@ -58,7 +58,7 @@ export default function SearchBar() {
 
   return (
     <div className='flex justify-center text-center'>
-        <div className='flex flex-col gap-1 mb-4'>
+        <div className='flex flex-col gap-1 mb-2'>
             <p className='text-3xl font-bold text-[#131A2B] dark:text-[#FAFAFA]'>Welcome to <span className='text-[#8FB2F5]'>iWeather</span></p>
             <p className='text-slate-500'>Choose a location to see the weather forecast</p>
             <div className='flex items-center'>
